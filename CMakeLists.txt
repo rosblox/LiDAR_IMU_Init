@@ -94,8 +94,5 @@ add_executable(li_init
         src/preprocess.cpp)
 
 target_link_libraries(li_init ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${PYTHON_LIBRARIES} ${CERES_LIBRARIES})
-target_include_directories(li_init PRIVATE ${PYTHON_INCLUDE_DIRS})
-
-
-
-
+target_include_directories(li_init PRIVATE ${catkin_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
+add_dependencies(li_init ${catkin_EXPORTED_TARGETS})
