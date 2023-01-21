@@ -35,6 +35,10 @@ else()
   add_definitions(-DMP_PROC_NUM=1)
 endif()
 
+# Processor number of build machine is independent of targeted running machine, thus use common setting:
+add_definitions(-DMP_EN)
+add_definitions(-DMP_PROC_NUM=2)
+
 find_package(OpenMP QUIET)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}   ${OpenMP_C_FLAGS}")
