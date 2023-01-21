@@ -2,7 +2,7 @@
 
 <launch>
 
-    <node pkg="rosbag" type="play" name="player" output="screen" args="/$(env BAG_FILE)" launch-prefix="bash -c 'sleep 5; $0 $@' "/>
+    <node pkg="rosbag" type="play" name="player" output="screen" args="/$(env GDRIVE_BAGFILE_NAME)" launch-prefix="bash -c 'sleep 5; $0 $@' "/>
 
     <include file="$(find lidar_imu_init)/launch/livox_avia.launch"/>
 
