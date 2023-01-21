@@ -1,9 +1,0 @@
-
-
-<launch>
-
-    <node pkg="rosbag" type="play" name="player" output="screen" args="/${env BAG_FILE}" launch-prefix="bash -c 'sleep 5; $0 $@' "/>
-
-    <include file="$(find lidar_imu_init)/launch/livox_mid360.launch"/>
-
-</launch>
