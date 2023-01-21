@@ -1133,9 +1133,11 @@ int main(int argc, char **argv) {
                 }
 
                 if (EKF_stop_flg) break;
+
+                #endif
+
             }
 
-            #endif
 
 
             /******* Publish odometry *******/
